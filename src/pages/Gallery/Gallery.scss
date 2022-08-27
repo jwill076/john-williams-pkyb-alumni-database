@@ -1,0 +1,705 @@
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/queries' as *;
+
+.header{
+    background-color: $pkyb-burgundy;
+
+    @include tablet{
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+    }
+
+    &__flexbox1{
+        display: flex;
+        justify-content: center;
+
+        .flexbox1__logo-container{
+            display: flex;
+            justify-content: center;
+
+            @include tablet{
+                height: 100%;
+                padding-left: 4.5vw;
+            }
+
+            .flexbox1__logo-link{
+
+                .flexbox1__logo{
+                    margin: 1rem 1rem 0.5rem 0;
+                    width: 4rem;
+
+                    @include tablet{
+                        width: 3rem;
+                        margin-top: 1rem;
+                        margin-bottom: 0rem;
+                    }
+
+                    @include desktop{
+                        margin-left: 5vw;
+                    }
+                }
+            }
+        }
+
+        .flexbox1__title{
+            font-size: 2rem;
+            height: 3rem;
+            color: $pkyb-white;
+            margin-top: 2rem;
+
+            @include tablet{
+                margin-top: 1.75rem;
+                font-size: 1.5rem;
+            }
+
+            @include desktop{
+                margin-left: 2rem;
+            }
+        }
+    }
+
+    &__flexbox2{
+        display: flex;
+
+        @include tablet{
+            padding-right: 4vw;
+        }
+
+        @include desktop{
+            margin-right: 5vw;
+        }
+
+        .flexbox2__home-container{
+            background-color: $pkyb-burgundy;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            border-bottom: 5px solid $pkyb-burgundy;
+
+            @include tablet{
+                margin-bottom: 0;
+                border-bottom: none;
+            }
+
+            .flexbox2__home-link{
+                text-decoration: none;
+
+                .link__home-text{
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    color: $pkyb-white;
+                    margin: 0.75rem 0 0.5rem 0;
+
+                    @include tablet{
+                        color: $pkyb-white;
+                        margin-top: 1.75rem;
+                        font-size: 1.25rem;
+                        padding-right: 2rem;
+                        border-bottom: 5px solid $pkyb-burgundy;
+                        width: 3.6rem;
+                        margin-right: 2rem;
+                    }
+                }
+            }
+        }
+
+        .flexbox2__about-container{
+            background-color: $pkyb-white;
+            border-bottom: 5px solid $pkyb-burgundy;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+
+            @include tablet{
+                background-color: $pkyb-burgundy;
+            }
+            
+            .flexbox2__about-link{
+                text-decoration: none;
+
+                .link__about-text{
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    color: $pkyb-dark-black;
+                    margin: 0.75rem 0 0.5rem 0;
+
+                    @include tablet{
+                        margin-top: 1.75rem;
+                        font-size: 1.25rem;
+                        width: 4.35rem;
+                        color: $pkyb-white;
+                        border-bottom: 5px solid $pkyb-white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.gallery__flexbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .flexbox1__search{
+        display: flex;
+        width: 70vw;
+        margin: 1.5rem 0;
+
+        @include tablet{
+            width: 90vw;
+        }
+
+        @include desktop{
+            width: 80vw;
+        }
+
+        .search__icon-container{
+            width: 2.5rem;
+            padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+            background-color: rgba($pkyb-silver, 0.5);
+            border-bottom-left-radius: 0.4rem;
+            border-top-left-radius: 0.4rem;
+        }
+
+        .search__input{
+            width: 100%;
+            background-color: rgba($pkyb-silver, 0.5);
+            border: none;
+            border-bottom-right-radius: 0.4rem;
+            border-top-right-radius: 0.4rem;
+            font-weight: 600;
+            font-size: 1rem;
+            padding-left: 0.25rem;
+            padding-top: 0.25rem;
+        }
+    }
+
+    .flexbox2__advanced-filters{
+        position: absolute;
+        right: 15vw;
+        top: 4.1rem;
+
+        @include tablet{
+            right: 5vw;
+        }
+
+        @include desktop{
+            right: 10vw;
+        }
+
+        .advanced-filters__text{
+            font-weight: 600;
+            font-size: 0.75rem;
+            border-bottom: 2px solid $pkyb-dark-black;
+            height: 0.75rem;
+            cursor: pointer;
+        }
+    }
+
+    .flexbox3__container{
+
+        @include tablet{
+            display: flex;
+            width: 90vw;
+        }
+
+        @include desktop{
+            width: 80vw;
+        }
+        
+        .container1__filters{
+            background-color: rgba($pkyb-silver, 0.3);
+            display: none;
+            width: 90vw;
+            flex-direction: column;
+            align-items: center;
+
+            @include tablet{
+                width: 44vw;
+                margin-right: 2.75vw;
+                margin-bottom: 1rem;
+            }
+
+            @include desktop{
+                width: 40vw;
+                margin-right: 1vw;
+            }
+
+            .filters__title{
+                color: $pkyb-burgundy;
+                font-size: 1.85rem;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                margin: 1.5rem 0 1rem 0;
+
+                @include tablet{
+                    margin-top: 3.5vw;
+                    font-size: 4vw;
+                    margin-bottom: 0.5rem;
+                }
+
+                @include desktop{
+                    font-size: 2.5rem;
+                    margin-top: 3vw;
+                }
+            }
+
+            .filters__form{
+
+                .form__flexbox1{
+                    display: flex;
+
+                    @include tablet{
+                        flex-direction: column;
+                    }
+
+                    .form__school{
+                        width: 40vw;
+                        margin: 1rem 0.5rem 1rem 1rem;
+                        display: flex;
+                        background-color: rgba($pkyb-silver, 0.5);
+                        border-radius: 0.4rem;
+
+                        @include tablet{
+                            margin: 0.75rem 4vw;
+                            width: 34.75vw;
+                            height: 4.5vw;
+                        }
+
+                        @include desktop{
+                            height: 3rem;
+                            width: 34vw;
+                            margin: 1rem 3rem;
+                        }
+
+                        .school__icon-container{
+                            width: 2.5rem;
+                            padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+                            border-bottom-left-radius: 0.4rem;
+                            border-top-left-radius: 0.4rem;
+
+                            @include tablet{
+                                width: 5.25vw;
+                                padding: 1vw 1vw 0.5vw 1vw;
+                            }
+
+                            @include desktop{
+                                width: 3.75rem;
+                                padding-top: 0.75vw;
+                            }
+                        }
+
+                        .school__input{
+                            width: 100%;
+                            background-color: rgba($pkyb-silver, 0);
+                            border: none;
+                            border-bottom-right-radius: 0.4rem;
+                            border-top-right-radius: 0.4rem;
+                            font-weight: 600;
+                            font-size: 1rem;
+                            padding-left: 0.25rem;
+                            padding-top: 0.25rem;
+
+                            @include tablet{
+                                font-size: 2.15vw;
+                            }
+
+                            @include desktop{
+                                font-size: 1.35rem;
+                                padding-top: 0.6rem;
+                            }
+                        }
+
+                        .school__arrow-icon-container{
+
+                            .school__arrow-icon{
+                                width: 1.5rem;
+                                padding: 0.5rem 0.5rem 0 0;
+
+                                @include tablet{
+                                    width: 3.5vw;
+                                    padding: 1.25vw 1.25vw 0 0;
+                                }
+
+                                @include desktop{
+                                    width: 2.5rem;
+                                    padding-top: 1vw;
+                                }
+                            }
+                        }
+                    }
+
+                    .form__year{
+                        width: 40vw;
+                        display: flex;
+                        margin: 1rem 1rem 1rem 0.5rem;
+                        height: 2.25rem;
+
+                        @include tablet{
+                            margin: 0.75rem 4vw;
+                            width: 34.75vw;
+                            height: 4.5vw;
+                        }
+
+                        @include desktop{
+                            height: 3rem;
+                            width: 34vw;
+                            margin: 1rem 3rem;
+                        }
+
+                        .year__icon-container{
+                            width: 2.5rem;
+                            padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+                            background-color: rgba($pkyb-silver, 0.5);
+                            border-bottom-left-radius: 0.4rem;
+                            border-top-left-radius: 0.4rem;
+
+                            @include tablet{
+                                width: 5vw;
+                                padding: 1vw 1vw 0.5vw 1vw;
+                            }
+
+                            @include desktop{
+                                width: 3.5rem;
+                                padding-top: 0.89vw;
+                            }
+                        }
+
+                        .year__input{
+                            width: 100%;
+                            background-color: rgba($pkyb-silver, 0.5);
+                            border: none;
+                            border-bottom-right-radius: 0.4rem;
+                            border-top-right-radius: 0.4rem;
+                            font-weight: 600;
+                            font-size: 1rem;
+                            padding-top: 0.25rem;
+
+                            @include tablet{
+                                font-size: 2.2vw;
+                                padding-left: 0.25rem;
+                            }
+
+                            @include desktop{
+                                font-size: 1.35rem;
+                                padding-top: 0.5rem;
+                            }
+                        }
+                    }
+                }
+
+                .form__flexbox2{
+                    display: flex;
+                    margin-top: -1rem;
+                    margin-bottom: 1.5rem;
+
+                    @include tablet{
+                        flex-direction: column;
+                        margin-top: 0;
+                        margin-bottom: 1rem;
+                    }
+
+                    .form__email{
+                        width: 40vw;
+                        display: flex;
+                        height: 2.25rem;
+                        margin: 1rem 0.5rem 1rem 1rem;
+
+                        @include tablet{
+                            margin: 0.75rem 4vw;
+                            width: 34.75vw;
+                            height: 4.5vw;
+                        }
+
+                        @include desktop{
+                            height: 3rem;
+                            width: 34vw;
+                            margin: 1rem 3rem;
+                        }
+
+                        .email__icon-container{
+                            width: 2.5rem;
+                            padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+                            background-color: rgba($pkyb-silver, 0.5);
+                            border-bottom-left-radius: 0.4rem;
+                            border-top-left-radius: 0.4rem;
+
+                            @include tablet{
+                                width: 5.25vw;
+                                padding: 1vw 1vw 0.5vw 1vw;
+                            }
+
+                            @include desktop{
+                                width: 3.75rem;
+                                padding-top: 0.75vw;
+                            }
+                        }
+
+                        .email__input{
+                            width: 100%;
+                            background-color: rgba($pkyb-silver, 0.5);
+                            border: none;
+                            border-bottom-right-radius: 0.4rem;
+                            border-top-right-radius: 0.4rem;
+                            font-weight: 600;
+                            font-size: 1rem;
+                            padding-left: 0.25rem;
+                            padding-top: 0.25rem;
+
+                            @include tablet{
+                                font-size: 2.15vw;
+                            }
+
+                            @include desktop{
+                                font-size: 1.35rem;
+                                padding-top: 0.5rem;
+                            }
+                        }
+                    }
+
+                    .form__username{
+                        width: 40vw;
+                        display: flex;
+                        height: 2.25rem;
+                        margin: 1rem 1rem 1rem 0.5rem;
+
+                        @include tablet{
+                            margin: 0.75rem 4vw;
+                            width: 34.75vw;
+                            height: 4.5vw;
+                        }
+
+                        @include desktop{
+                            height: 3rem;
+                            width: 34vw;
+                            margin: 1rem 3rem;
+                        }
+
+                        .username__icon-container{
+                            width: 2.5rem;
+                            padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+                            background-color: rgba($pkyb-silver, 0.5);
+                            border-bottom-left-radius: 0.4rem;
+                            border-top-left-radius: 0.4rem;
+
+                            @include tablet{
+                                padding: 1vw 1vw 0.5vw 1vw;
+                                width: 5vw;
+                            }
+
+                            @include desktop{
+                                width: 3.75rem;
+                                padding-top: 0.75vw;
+                            }
+
+                            .username__icon{
+                                width: 1.25rem;
+
+                                @include tablet{
+                                    width: 2.75vw;
+                                }
+
+                                @include desktop{
+                                    width: 1.8rem;
+                                }
+                            }
+                        }
+
+                        .username__input{
+                            width: 100%;
+                            background-color: rgba($pkyb-silver, 0.5);
+                            border: none;
+                            border-bottom-right-radius: 0.4rem;
+                            border-top-right-radius: 0.4rem;
+                            font-weight: 600;
+                            font-size: 1rem;
+                            padding-left: 0.25rem;
+                            padding-top: 0.25rem;
+
+                            @include tablet{
+                                font-size: 2.15vw;
+                            }
+
+                            @include desktop{
+                                font-size: 1.35rem;
+                                padding-top: 0.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .filters__button{
+                background-color: $pkyb-burgundy;
+                border-radius: 1.25rem;
+                border: none;
+                margin-bottom: 1.5rem;
+
+                .button__link{
+                    text-decoration: none;
+
+                    .button__text-container{
+
+                        .button__text{
+                            color: $pkyb-white;
+                            font-size: 1.25rem;
+                            font-weight: 600;
+                            padding: 0.25rem 0.5rem;
+                            width: 33vw;
+                            padding-top: 0.4rem;
+
+                            @include tablet{
+                                width: 20vw;
+                                font-size: 2.5vw;
+                            }
+
+                            @include desktop{
+                                font-size: 1.5rem;
+                                padding-top: 0.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .show-or-not-to-show{
+            display: flex;
+        }
+
+        .container2__card-gallery{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 90vw;
+            margin-top: 1rem;
+
+            @include tablet{
+                margin-top: 0;
+            }
+
+            .card-gallery__links{
+                text-decoration: none;
+
+                .card-gallery__card{
+                    background-color: rgba($pkyb-silver, 0.5);
+                    padding: 1rem 1.5rem;
+                    margin-bottom: 1rem;
+                    width: 43vw;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    @include tablet{
+                        width: 21.5vw;
+                    }
+
+                    @include desktop{
+                        width: 19vw;
+                    }
+
+                    .card__avatar-container{
+                        background-color: $pkyb-white;
+                        padding: 1rem;
+
+                        .card__avatar{
+                            width: 28vw;
+                            padding-left: 0.2rem;
+
+                            @include tablet{
+                                width: 14vw;
+                            }
+                        }
+                    }
+
+                    .card__info{
+                        font-weight: 600;
+                        padding: 0.5rem 0.5rem 0 0.6rem;
+                        font-size: 2.5vw;
+                        color: $pkyb-dark-black;
+                        width: 32vw;
+
+                        @include tablet{
+                            font-size: 1.4vw;
+                            width: 19vw;
+                            padding-left: 1.5vw;
+                        }
+
+                        @include desktop{
+                            font-size: 1.15vw;
+                            width: 16vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .dropdown {
+        float: left;
+        overflow: hidden;
+      }
+      
+      .dropdown .dropbtn {
+        cursor: pointer;
+        font-size: 16px;  
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+      }
+      
+      .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+        background-color: red;
+      }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+      
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+      
+      .show {
+        display: block;
+      }      
+}
