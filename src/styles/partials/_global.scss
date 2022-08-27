@@ -1,0 +1,43 @@
+@use './queries' as *;
+
+// GLOBAL VARIABLE DECLARATION
+$pkyb-dark-black: #000000;
+$pkyb-black: #323232;
+$pkyb-silver: #afafaf;
+$pkyb-white: #ffffff;
+$pkyb-burgundy: rgb(125, 0, 25);
+
+// IMPORTED FONT FACE
+@font-face {
+    font-family: 'AvenirNext LT Pro';
+    src: url('../../assets/fonts/AvenirNextLTPro-Bold.woff') format('woff'),
+         url('../../assets/fonts/AvenirNextLTPro-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+  
+@font-face {
+    font-family: 'AvenirNext LT Pro';
+    src: url('../../assets/fonts/AvenirNextLTPro-Demi.woff') format('woff'),
+         url('../../assets/fonts/AvenirNextLTPro-Demi.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AvenirNext LT Pro';
+    src: url('../../assets/fonts/AvenirNextLTPro-Regular.woff') format('woff'),
+         url('../../assets/fonts/AvenirNextLTPro-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+// CREATING MY OWN DEFAULT BROWSER SETTINGS
+* {
+    font-family: 'AvenirNext LT Pro', serif;
+    box-sizing: border-box;
+    margin: 0;
+}
