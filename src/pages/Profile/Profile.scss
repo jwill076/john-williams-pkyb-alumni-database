@@ -1,0 +1,538 @@
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/queries' as *;
+
+.header{
+    background-color: $pkyb-burgundy;
+
+    @include tablet{
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+    }
+
+    &__flexbox1{
+        display: flex;
+        justify-content: center;
+
+        .flexbox1__logo-container{
+            display: flex;
+            justify-content: center;
+
+            @include tablet{
+                height: 100%;
+                padding-left: 4.5vw;
+            }
+
+            .flexbox1__logo-link{
+
+                .flexbox1__logo{
+                    margin: 1rem 1rem 0.5rem 0;
+                    width: 4rem;
+
+                    @include tablet{
+                        width: 3rem;
+                        margin-top: 1rem;
+                        margin-bottom: 0rem;
+                    }
+
+                    @include desktop{
+                        margin-left: 5vw;
+                    }
+                }
+            }
+        }
+
+        .flexbox1__title{
+            font-size: 2rem;
+            height: 3rem;
+            color: $pkyb-white;
+            margin-top: 2rem;
+
+            @include tablet{
+                margin-top: 1.75rem;
+                font-size: 1.5rem;
+            }
+
+            @include desktop{
+                margin-left: 2rem;
+            }
+        }
+    }
+
+    &__flexbox2{
+        display: flex;
+
+        @include tablet{
+            padding-right: 4vw;
+        }
+
+        @include desktop{
+            margin-right: 5vw;
+        }
+
+        .flexbox2__home-container{
+            background-color: $pkyb-white;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            border-bottom: 5px solid $pkyb-burgundy;
+
+            @include tablet{
+                background-color: $pkyb-burgundy;
+                margin-bottom: 0;
+                border-bottom: none;
+            }
+
+            .flexbox2__home-link{
+                text-decoration: none;
+
+                .link__home-text{
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    color: $pkyb-dark-black;
+                    margin: 0.75rem 0 0.5rem 0;
+
+                    @include tablet{
+                        color: $pkyb-white;
+                        margin-top: 1.75rem;
+                        font-size: 1.25rem;
+                        padding-right: 2rem;
+                        border-bottom: 5px solid $pkyb-white;
+                        width: 4rem;
+                        margin-right: 2rem;
+                    }
+                }
+            }
+        }
+
+        .flexbox2__about-container{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            background-color: $pkyb-burgundy;
+            
+            .flexbox2__about-link{
+                text-decoration: none;
+
+                .link__about-text{
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    color: $pkyb-white;
+                    margin: 0.75rem 0 0.5rem 0;
+
+                    @include tablet{
+                        margin-top: 1.75rem;
+                        font-size: 1.25rem;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.profile{
+
+    &__flexbox1{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0 0.5rem;
+        width: 100%;
+
+        @include tablet{
+            padding: 0;
+        }
+
+        @include desktop{
+            width: 90vw;
+            margin-left: 6vw;
+            height: 36.5rem;
+        }
+
+        .flexbox1__avatar-quote{
+
+            .avatar__image-container{
+                border: 6px solid $pkyb-dark-black;
+                margin: 1rem;
+                margin-left: 0.5rem;
+                padding: 1rem;
+                border-radius: 0.25rem;
+
+                @include tablet{
+                    width: 25vw;
+                    display: flex;
+                    justify-content: center;
+                    margin: 2rem 0 0.5rem 6.5vw;
+                }
+
+                @include desktop{
+                    width: 20vw;
+                    margin-left: 4.5vw;
+                }
+
+                .avatar__image{
+                    width: 32vw;
+
+                    @include tablet{
+                        width: 20vw;
+                    }
+
+                    @include desktop{
+                        width: 16.5vw;
+                    }
+                }
+            }
+
+            .quote__text{
+                display: none;
+
+                @include tablet{
+                    display: block;
+                    font-weight: 600;
+                    width: 28.75vw;
+                    margin-left: 6vw;
+                    font-size: 2.1vw;
+                    line-height: 2.5vw;
+                }
+
+                @include desktop{
+                    font-size: 1.5vw;
+                    width: 23.5vw;
+                    margin-left: 4.75vw;
+                    line-height: 2.75vw;
+                }
+            }
+        }
+
+        .flexbox1__contact-info{
+
+            @include tablet{
+                width: 60vw;
+                height: 50vw;
+            }
+
+            .contact-info__container1{
+
+                @include tablet{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .contact-info__title-username{
+                    margin: 1rem 0;
+                    margin-left: -0.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    @include tablet{
+                        margin-top: 2rem;
+                    }
+
+                    .contact-info__title{
+                        font-size: 5vw;
+
+                        @include desktop{
+                            font-size: 3rem;
+                            margin-left: 4vw;
+                        }
+                    }
+
+                    .contact-info__username{
+                        font-weight: 600;
+                        font-size: 3.5vw;
+
+                        @include tablet{
+                            margin-bottom: -0.5rem;
+                        }
+
+                        @include desktop{
+                            font-size: 2rem;
+                            margin-left: 3vw;
+                        }
+                    }
+                }
+
+                .contact-info__social-media{
+                    display: none;
+
+                    @include tablet{
+                        display: flex;
+                        justify-content: space-between;
+                        width: 80%;
+                        margin-top: 0.5vw;
+                    }
+
+                    @include desktop{
+                        width: 70%;
+                        margin-left: 2rem;
+                    }
+
+                    .social-media__anchor{
+
+                        .anchor__icon{
+
+                            @include tablet{
+                                border-radius: 0.4rem;
+                                width: 2.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .contact-info__container2{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                @include tablet{
+                    display: none;
+                }
+
+                .contact-info__email{
+                    font-weight: 600;
+                    font-size: 2.65vw;
+                }
+
+                .contact-info__school-year{
+                    display: none;
+
+                    @include tablet{
+                        display: block;
+                        margin-left: 1rem;
+                    }
+                }
+
+                .contact-info__quote{
+                    width: 42vw;
+                    height: 25vw;
+                    font-weight: 600;
+                    line-height: 5vw;
+                    font-size: 2.65vw;
+                    margin: 1rem 0 0.5rem 0;
+
+                    @include tablet{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &__flexbox2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .flexbox2__container1{
+
+            @include tablet{
+                width: 48vw;
+                margin-left: 37vw;
+                margin-top: -27.5vw;
+            }
+
+            @include desktop{
+                margin-top: -23.5rem;
+                margin-left: 39vw;
+            }
+
+            .container1__email{
+                display: none;
+
+                @include tablet{
+                    display: block;
+                    font-weight: 600;
+                    font-size: 2vw;
+                }
+
+                @include desktop{
+                    font-size: 1.25rem;
+                }
+            }
+
+            .container1__school-year{
+                display: flex;
+                justify-content: space-between;
+                width: 87.5vw;
+                margin-top: 0.5rem;
+                font-weight: 600;
+                font-size: 3.2vw;
+
+                @include tablet{
+                    font-size: 2vw;
+                    width: 48vw;
+                    margin-left: 0;
+                }
+
+                @include desktop{
+                    font-size: 1.25rem;
+                    width: 42.5vw;
+                }
+            }
+        }
+
+        .flexbox2__container2{
+            font-weight: 600;
+            font-size: 3.2vw;
+            display: flex;
+            justify-content: space-between;
+            width: 87.5vw;
+            margin-top: 0.5rem;
+
+            @include tablet{
+                display: none;
+            }
+        }
+
+        .flexbox2__container3{
+            display: none;
+
+            @include tablet{
+                display: flex;
+                width: 48vw;
+                margin-left: 36.75vw;
+                margin-top: 1rem;
+                height: 20vw;
+            }
+
+            @include desktop{
+                width: 42.5vw;
+                margin-left: 33.5vw;
+            }
+
+            .container3__college{
+                
+                @include tablet{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    background-color: rgba($pkyb-silver, 0.5);
+                    padding: 0.5rem 0 0.25rem 0;
+                    width: 35vw;
+                    margin-right: 1.25rem;
+                    height: 17vw;
+                }
+
+                .college__title{
+
+                    @include tablet{
+                        font-weight: 600;
+                        font-size: 2.25vw;
+                    }
+
+                    @include desktop{
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .college__text{
+
+                    @include tablet{
+                        font-weight: 600;
+                        width: 9.25vw;
+                        margin-left: 1.55vw;
+                        font-size: 1.75vw;
+                    }
+
+                    @include desktop{
+                        font-size: 1.1rem;
+                        margin-left: 2.5vw;
+                    }
+                }
+
+                .college__icon-container{
+                    
+                    @include tablet{
+                        width: 5.5vw;
+                    }
+
+                    .college-icon{
+                        
+                        @include tablet{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .container3__career{
+
+                @include tablet{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    background-color: rgba($pkyb-silver, 0.5);
+                    padding: 0.5rem 0 0.25rem 0;
+                    width: 75%;
+                    height: 17vw;
+                }
+
+                .career__title{
+
+                    @include tablet{
+                        font-weight: 600;
+                        font-size: 2.25vw;
+                    }
+
+                    @include desktop{
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .career__text{
+                    
+                    @include tablet{
+                        width: 13vw;
+                        font-size: 2vw;
+                        font-weight: 600;
+                        margin-left: 6vw;
+                    }
+
+                    @include desktop{
+                        font-size: 1.5rem;
+                        width: 10rem;
+                    }
+                }
+
+                .career__icon-container{
+
+                    @include tablet{
+                        width: 5vw;
+                    }
+
+                    .career-icon{
+                        
+                        @include tablet{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__flexbox3{
+        display: flex;
+        justify-content: space-between;
+        width: 84vw;
+        margin: 1rem 0;
+        margin-left: 7vw;
+
+        @include tablet{
+            display: none;
+        }
+
+        .social__anchor{
+
+            .social__icon{
+                width: 3rem;
+                border-radius: 0.5rem;
+            }
+        }
+    }
+}
