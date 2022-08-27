@@ -1,0 +1,454 @@
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/queries' as *;
+
+.header{
+    background-color: $pkyb-burgundy;
+
+    @include tablet{
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+    }
+
+    &__flexbox1{
+        display: flex;
+        justify-content: center;
+
+        .flexbox1__logo-container{
+            display: flex;
+            justify-content: center;
+
+            @include tablet{
+                height: 100%;
+                padding-left: 4.5vw;
+            }
+
+            .flexbox1__logo-link{
+
+                .flexbox1__logo{
+                    margin: 1rem 1rem 0.5rem 0;
+                    width: 4rem;
+
+                    @include tablet{
+                        width: 3rem;
+                        margin-top: 1rem;
+                        margin-bottom: 0rem;
+                    }
+
+                    @include desktop{
+                        margin-left: 5vw;
+                    }
+                }
+            }
+        }
+
+        .flexbox1__title{
+            font-size: 2rem;
+            height: 3rem;
+            color: $pkyb-white;
+            margin-top: 2rem;
+
+            @include tablet{
+                margin-top: 1.75rem;
+                font-size: 1.5rem;
+            }
+
+            @include desktop{
+                margin-left: 2rem;
+            }
+        }
+    }
+
+    &__flexbox2{
+        display: flex;
+
+        @include tablet{
+            padding-right: 4vw;
+        }
+
+        @include desktop{
+            margin-right: 5vw;
+        }
+
+        .flexbox2__home-container{
+            background-color: $pkyb-white;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            border-bottom: 5px solid $pkyb-burgundy;
+
+            @include tablet{
+                background-color: $pkyb-burgundy;
+                margin-bottom: 0;
+                border-bottom: none;
+            }
+
+            .flexbox2__home-link{
+                text-decoration: none;
+
+                .link__home-text{
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    color: $pkyb-dark-black;
+                    margin: 0.75rem 0 0.5rem 0;
+
+                    @include tablet{
+                        color: $pkyb-white;
+                        margin-top: 1.75rem;
+                        font-size: 1.25rem;
+                        padding-right: 2rem;
+                        border-bottom: 5px solid $pkyb-white;
+                        width: 3.65rem;
+                        margin-right: 2rem;
+                    }
+                }
+            }
+        }
+
+        .flexbox2__about-container{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            background-color: $pkyb-burgundy;
+            
+            .flexbox2__about-link{
+                text-decoration: none;
+
+                .link__about-text{
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    color: $pkyb-white;
+                    margin: 0.75rem 0 0.5rem 0;
+
+                    @include tablet{
+                        margin-top: 1.75rem;
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.login__flexbox-background{
+    
+    @include tablet{
+        background-color: rgba($pkyb-silver, 0.5);
+        width: 100%;
+        height: 51vw;
+        position: relative;
+    }
+
+    @include desktop{
+        height: 39rem;
+    }
+
+    .login__flexbox{
+        
+        @include tablet{
+            display: flex;
+            width: 90vw;
+            position: absolute;
+            left: 5vw;
+            top: 5vw;
+        }
+
+        @include desktop{
+            top: 3.5rem;
+            width: 81vw;
+            left: 9.5vw;
+            height: 32rem;
+        }
+
+        .login__flexbox1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            @include tablet{
+                width: 60vw;
+                height: 40vw;
+                background-color: $pkyb-white;
+            }
+
+            @include desktop{
+                height: 32rem;
+                padding-top: 0.5rem;
+            }
+
+            .flexbox1__title{
+                color: $pkyb-burgundy;
+                font-size: 1.85rem;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                margin: 2.5rem 0 1.5rem 0;
+
+                @include tablet{
+                    font-size: 3.75vw;
+                    padding-top: 5.5vw;
+                    margin-bottom: 2rem;
+                    margin-top: 0;
+                }
+
+                @include desktop{
+                    font-size: 2.5rem;
+                    margin-bottom: 2.25rem;
+                }
+            }
+
+            .flexbox1__email{
+                display: flex;
+                width: 58vw;
+
+                @include tablet{
+                    width: 35vw;
+                    height: 5vw;
+                }
+
+                @include desktop{
+                    width: 24rem;
+                    height: 3rem;
+                }
+
+                .email__icon-container{
+                    width: 2.5rem;
+                    padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+                    background-color: rgba($pkyb-silver, 0.5);
+                    border-bottom-left-radius: 0.4rem;
+                    border-top-left-radius: 0.4rem;
+                    
+                    @include tablet{
+                        width: 5vw;
+                        padding: 1vw;
+                    }
+
+                    @include desktop{
+                        width: 3.75rem;
+                        padding: 0.6rem 0.75rem 0 1rem;
+                    }
+                }
+
+                .email__input{
+                    width: 100%;
+                    background-color: rgba($pkyb-silver, 0.5);
+                    border: none;
+                    border-bottom-right-radius: 0.4rem;
+                    border-top-right-radius: 0.4rem;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    padding-left: 0.25rem;
+                    padding-top: 0.25rem;
+
+                    @include tablet{
+                        font-size: 2.1vw;
+                    }
+
+                    @include desktop{
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+
+            .flexbox1__password{
+                display: flex;
+                margin: 1.5rem 0;
+                width: 58vw;
+
+                @include tablet{
+                    width: 35vw;
+                    height: 5vw;
+                }
+
+                @include desktop{
+                    width: 24rem;
+                    height: 3rem;
+                    margin-bottom: 3rem;
+                }
+
+                .password__icon-container{
+                    width: 2.5rem;
+                    padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+                    background-color: rgba($pkyb-silver, 0.5);
+                    border-bottom-left-radius: 0.4rem;
+                    border-top-left-radius: 0.4rem;
+
+                    @include tablet{
+                        width: 5vw;
+                        padding: 1vw;
+                    }
+
+                    @include desktop{
+                        width: 3.75rem;
+                        padding: 0.6rem 0.75rem 0 0.75rem;
+                    }
+
+                    .password__icon{
+                        
+                        @include desktop{
+                            margin-left: 0.25rem;
+                        }
+                    }
+                }
+
+                .password__input{
+                    width: 100%;
+                    background-color: rgba($pkyb-silver, 0.5);
+                    border: none;
+                    border-bottom-right-radius: 0.4rem;
+                    border-top-right-radius: 0.4rem;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    padding-left: 0.25rem;
+                    padding-top: 0.25rem;
+
+                    @include tablet{
+                        font-size: 2.1vw;
+                    }
+
+                    @include desktop{
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+
+            .flexbox1__button{
+                background-color: $pkyb-burgundy;
+                border-radius: 1.25rem;
+                border: none;
+                margin-bottom: 1.5rem;
+
+                .button__link{
+                    text-decoration: none;
+
+                    .button__text-container{
+
+                        .button__text{
+                            color: $pkyb-white;
+                            font-size: 1.25rem;
+                            font-weight: 600;
+                            padding: 0.25rem 0.5rem;
+                            width: 33vw;
+                            padding-top: 0.4rem;
+
+                            @include tablet{
+                                width: 25vw;
+                                height: 4.25vw;
+                                padding-top: 0.9vw;
+                                font-size: 2.5vw;
+                            }
+
+                            @include desktop{
+                                width: 15vw;
+                                font-size: 1.25rem;
+                                height: 2.25rem;
+                                padding-top: 0.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .flexbox1__icon-container{
+
+                .graduation__icon{
+                    width: 100%;
+
+                    @include tablet{
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .login__flexbox2{
+            background-color: $pkyb-burgundy;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @include tablet{
+                width: 30vw;
+            }
+
+            .flexbox2__title{
+                color: $pkyb-white;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                font-size: 1.75rem;
+                margin-bottom: 0.75rem;
+                padding-top: 1.25rem;
+
+                @include tablet{
+                    font-size: 3.25vw;
+                    padding-top: 6.25vw;
+                    margin-bottom: 1.6rem;
+                }
+
+                @include desktop{
+                    font-size: 2.25rem;
+                    margin-bottom: 2rem;
+                }
+            }
+
+            .flexbox2__text{
+                color: $pkyb-white;
+                font-weight: 600;
+                font-size: 1.3rem;
+                width: 20rem;
+                padding-left: 1rem;
+
+                @include tablet{
+                    font-size: 2.25vw;
+                    width: 22vw;
+                    margin-bottom: 0.5rem;
+                    margin-left: 2vw;
+                }
+
+                @include desktop{
+                    font-size: 1.5rem;
+                    width: 15rem;
+                    margin-left: 3vw;
+                    line-height: 2rem;
+                }
+            }
+
+            .flexbox2__sign-up-button{
+                background-color: $pkyb-burgundy;
+                margin: 1.5rem 0;
+
+                @include tablet{
+                    margin: 3vw 0;
+                }
+
+                .sign-up-button__link{
+                    text-decoration: none;
+
+                    .sign-up-button{
+                        color: $pkyb-white;
+                        background-color: $pkyb-burgundy;
+                        border: 7px solid $pkyb-white;
+                        font-size: 1.25rem;
+                        font-weight: 600;
+                        padding: 0.25rem 0.5rem;
+                        width: 33vw;
+                        padding-top: 0.5rem;
+                        border-radius: 1.5rem;
+
+                        @include tablet{
+                            width: 20vw;
+                            font-size: 2.5vw;
+                            margin-left: 0.5rem;
+                        }
+
+                        @include desktop{
+                            width: 15vw;
+                            font-size: 1.25rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
